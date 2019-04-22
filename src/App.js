@@ -1,8 +1,6 @@
 import React from "react";
 // import logo from './logo.svg';
 import "./App.css";
-import { connect } from "react-redux";
-import actions from "./redux/actions";
 
 function App({ char, searchTerm, searchTermChanged }) {
   return (
@@ -50,7 +48,4 @@ function App({ char, searchTerm, searchTermChanged }) {
   );
 }
 
-export default connect(
-  store => store,
-  actions
-)(App);
+export default App;
