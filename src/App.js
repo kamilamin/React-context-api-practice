@@ -33,12 +33,16 @@ function App({ char, searchTerm, searchTermChanged }) {
         </thead>
         <tbody>
           {char.map(curChar => (
-            <tr key={curChar.name}>
-              <td>{curChar.name}</td>
-              <td>{curChar.alter_ego}</td>
-              <td>{curChar.first_appearance}</td>
-              <img src={require(`./images/View/${curChar.name}.png`)} aria-hidden alt="Super Hero" />
-            </tr>
+              <tr key={curChar.name}>
+                <td>{curChar.name}</td>
+                <td>{curChar.alter_ego}</td>
+                <td>{curChar.first_appearance}</td>
+                <img
+                  src={require(`./images/View/${curChar.name}.png`)}
+                  aria-hidden
+                  alt="Super Hero"
+                />
+              </tr>
           ))}
         </tbody>
       </table>
