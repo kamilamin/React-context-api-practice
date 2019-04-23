@@ -10,9 +10,9 @@ export const ThemeContext = React.createContext(DEFAULT_STATE);
 
 class Provider extends Component {
   state = DEFAULT_STATE;
-  searchThemeChanged = searchTheme => {
+  searchTermChanged = searchTerm => {
     this.setState({
-      searchTheme
+      searchTerm
     });
   };
   render() {
@@ -20,7 +20,7 @@ class Provider extends Component {
       <ThemeContext.Provider
         value={{
           ...this.state,
-          searchThemeChanged: this.searchThemeChanged
+          searchTermChanged: this.searchTermChanged
         }}
       >
         {this.props.children}

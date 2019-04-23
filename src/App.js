@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 
 function App({ char, searchTerm, searchTermChanged }) {
+  console.log(searchTermChanged)
   return (
     <section>
       <div id="header">
@@ -38,7 +39,7 @@ function App({ char, searchTerm, searchTermChanged }) {
                 <img
                   src={require(`./images/View/${curChar.name}.png`)}
                   aria-hidden
-                  alt="Super Hero"
+                  alt={`Super Hero ${curChar.name}`}
                 />
               </tr>
           ))}

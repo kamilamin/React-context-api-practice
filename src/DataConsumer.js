@@ -1,13 +1,13 @@
-import React from 'react';
-import {ThemeContext} from './DataProvider';
+import React from "react";
+import { ThemeContext } from "./DataProvider";
 
 export default class Consumer extends React.Component {
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
 
     return (
       <ThemeContext.Consumer>
-        {({allChar, searchTerm, searchTermChanged}) => {
+        {({ allChar, searchTerm, searchTermChanged }) => {
           const char = searchTerm
             ? allChar.filter(
                 char =>
@@ -19,7 +19,7 @@ export default class Consumer extends React.Component {
             React.cloneElement(child, {
               char,
               searchTerm,
-              searchTermChanged,
+              searchTermChanged
             })
           );
         }}
